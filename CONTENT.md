@@ -35,3 +35,71 @@ API testing requires special tools:
 https://blog.postman.com/different-types-of-apis/    Types of APIs: A Complete Guide to API Architectures  
 https://aws.amazon.com/ru/what-is/api/    Что такое интерфейс прикладного программирования (API)?
 
+
+### Intro to API (part 2)
+API testing goals:
+- Increasing testing effectiveness
+- More extensive testing
+- Decreasing cost
+- Running tests that are impossible to run manually
+- Speed up test run
+- Increasing testing frequency/decreasing time to test cycle
+
+API testing objects:
+- Subsystems
+- Interfaces
+- Microservices
+
+API testing types:
+- Functional testing
+- Performance testing (Load/Stress/Endurance/Volume/Spike/Scalability)
+- Security testing (Authentication and Authorization/Session management/Input validation/Encryption)
+- Error code and message testing
+- Compliance testing
+
+#### STLC
+Requirements analysis:
+- Requirements (User stories, PRD, SRS, use cases)
+- Diagrams
+- API documentation (Swagger, GraphQl UI)
+
+Test planning:
+- Testing strategy
+- Environments
+- Resources
+- Defining volume of testing
+
+Test case development:
+- Test scenarios creation
+- Defining input data
+- Defining expected results
+
+Environment setup:
+- HW setup
+- SW setup
+- Environment configuration
+- Uploading test data
+
+Test execution:
+- Test scenarios execution
+- Recording results
+- Defect documentation and tracking
+
+Test cycle closure:
+- Test results assessment
+- Reporting
+- Test process analysis
+- Changes introduction
+
+Advantages:
+- More tests
+- Test that can't be run manually
+- Independence from GUI
+- Faster
+- More effective
+
+Disadvantages:
+- Additional expenses
+- Additional technologies
+- Time for new tests development
+- Tests support
