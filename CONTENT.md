@@ -2,7 +2,7 @@
 
 ## Theory of API testing
 
-### Intro to API (part 1)
+### 01 Intro to API (part 1)
 API (Application Programming Interface) - set of rules, protocols and tools, that allow programs to interact with each other.
 API specifies what functions, methods and parameters are accessible for usage and how they should interact.
 
@@ -36,7 +36,7 @@ https://blog.postman.com/different-types-of-apis/    Types of APIs: A Complete G
 https://aws.amazon.com/ru/what-is/api/    Что такое интерфейс прикладного программирования (API)?
 
 
-### Intro to API (part 2)
+### 02 Intro to API (part 2)
 API testing goals:
 - Increasing testing effectiveness
 - More extensive testing
@@ -103,3 +103,22 @@ Disadvantages:
 - Additional technologies
 - Time for new tests development
 - Tests support
+
+
+## Web applications development
+
+### 03 Client-server architecture. Client
+Client - who makes requests
+
+Web Apps:
+- HTML
+- CSS
+- JavaScript
+
+Clients:
+- Thin
+- Thick
+
+https://www.geeksforgeeks.org/system-design/client-server-model/    Client-Server Model  
+https://www.simplilearn.com/what-is-client-server-architecture-article#:~:text=In%20the%20IT%20context%2C%20the,access%20to%20data%20and%20services    What is Client-Server Architecture? Everything You Should Know  
+https://www.theknowledgeacademy.com/blog/client-server-architecture/    What is Client-Server Architecture? Explained in Detail  
