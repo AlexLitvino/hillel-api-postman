@@ -144,4 +144,33 @@ Types of architecture:
 - N-tier
 
 
+### Architecture styles of Web Applications
+Architecture:
+- Monolithic
+- Micro-services
 
+Monolithic architecture - all components work within one process or service.
+
+Monolithic apps:
+- Single process monolith
+- Distributed monolith
+- 3rd-party (black-box system)
+
+Testing peculiarities for monolithic:
+- Big number of dependencies
+- Regression testing
+- Big impact and defect inheritance
+- Low possibility for parallel testing
+
+Microservice architecture - is a style where program is divided on separate processes.
+
+Testing peculiarities for microservices:
+- Difficulties with integration
+- Infrastructure setup difficulties
+- Difficult to perform E2E testing
+- Debugging
+- Version compatibility
+
+https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith    Microservices vs. monolithic architecture  
+https://aws.amazon.com/ru/compare/the-difference-between-monolithic-and-microservices-architecture/    В чем разница между монолитной архитектурой и архитектурой микросервисов?  
+https://www.geeksforgeeks.org/software-engineering/monolithic-vs-microservices-architecture/    Monolithic Vs Microservices Architecture
