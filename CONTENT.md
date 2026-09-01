@@ -122,3 +122,26 @@ Clients:
 https://www.geeksforgeeks.org/system-design/client-server-model/    Client-Server Model  
 https://www.simplilearn.com/what-is-client-server-architecture-article#:~:text=In%20the%20IT%20context%2C%20the,access%20to%20data%20and%20services    What is Client-Server Architecture? Everything You Should Know  
 https://www.theknowledgeacademy.com/blog/client-server-architecture/    What is Client-Server Architecture? Explained in Detail  
+
+
+### 04 Client-server architecture. Server
+Server - central computer or program that provides services, resources or data to clients via network.
+
+Server functions:
+- Providing resources
+- Business logic
+- Authentication and authorization
+- Resource management
+
+Servers:
+- Physical
+- Cloud
+
+Types of architecture:
+- 1-tier (centralized)
+- 2-tier
+- 3-tier
+- N-tier
+
+
+
