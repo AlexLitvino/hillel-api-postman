@@ -204,3 +204,48 @@ HTTP principles:
 
 https://mxtoolbox.com/SuperTool.aspx?action=a%3aqauto.forstudy.space%2f&run=toolpage#    DNS tool  
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview    Overview of HTTP  
+
+
+### 07 Start-line and its structure
+HTTP message:
+- Start line
+  - Method
+  - URI
+  - Status code
+- Headers
+  - General
+  - Request
+  - Response
+  - Fetch metadata
+  - Representation
+- Body
+  - Request
+  - Response
+
+Start line for request:
+```
+Method Request-URI HTP-version
+GET /index.html HTTP/1.1
+```
+
+Start line for response:
+```
+HTTP-version Status-code Reason-phrase 
+HTTP/1.1 200 OK
+```
+
+HTTP methods:
+- POST
+- GET
+- PUT
+- DELETE
+- PATCH
+- HEAD
+- OPTIONS
+
+HTTP Status Codes:
+- Information
+- Success
+- Redirection
+- Client Error
+- Server Error
