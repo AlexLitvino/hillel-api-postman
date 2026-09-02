@@ -174,3 +174,33 @@ Testing peculiarities for microservices:
 https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith    Microservices vs. monolithic architecture  
 https://aws.amazon.com/ru/compare/the-difference-between-monolithic-and-microservices-architecture/    В чем разница между монолитной архитектурой и архитектурой микросервисов?  
 https://www.geeksforgeeks.org/software-engineering/monolithic-vs-microservices-architecture/    Monolithic Vs Microservices Architecture
+
+
+### 06 Intro to HTTP protocol
+HTTP versions:
+- 1.0 - 1996 - obsolete
+- 1.1 - 1997 - current
+- 2.0 - 2015 - current
+- 3.0 - 2022 - current
+
+Connection to HTTP-server
+- DNS
+- TCP connection
+- TLS/SSL connection
+
+Connection:
+1. Put request to queue
+2. DNS lookup
+3. TCP connection (3 stage handshake)
+4. Sending request
+5. Waiting for response
+6. Getting data
+
+HTTP principles:
+- Simple
+- Extensible
+- Stateless but not sessionless
+- TCP is used for connections
+
+https://mxtoolbox.com/SuperTool.aspx?action=a%3aqauto.forstudy.space%2f&run=toolpage#    DNS tool  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview    Overview of HTTP  
