@@ -261,3 +261,12 @@ Headers:
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers     HTTP headers  
 https://blog.postman.com/what-are-http-headers/    What are HTTP headers? Request and Response Metadata Guide  
+
+
+### 09 HTTP body
+Body types:
+- Text
+- XML
+- JSON
+- Form Data
+- Images, Video, Audio, etc.
