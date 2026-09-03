@@ -249,3 +249,15 @@ HTTP Status Codes:
 - Redirection
 - Client Error
 - Server Error
+
+
+### 08 HTTP headers
+Headers:
+- General
+- Request
+- Response
+- Representation
+- Fetch metadata request headers
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers     HTTP headers  
+https://blog.postman.com/what-are-http-headers/    What are HTTP headers? Request and Response Metadata Guide  
