@@ -270,3 +270,47 @@ Body types:
 - JSON
 - Form Data
 - Images, Video, Audio, etc.
+
+
+### 10 Encryption process.HTTP vs HTTPS
+HTTPS vs HTTP:
+- Encryption
+- Security certificates
+- Ports (443 vs 80)
+- SEO and Google rating
+
+Encryption:
+- Symmetrical - the same key for encryption and decryption
+- Asymmetrical - public key for encryption, private key for decryption
+
+Certificates goal:
+- Authentication
+- Encryption
+- Digital signs
+- Trust
+
+SSL (Secure Socket Layer)  
+TLS (Transport Layer Security)  
+
+Encryption process:
+1. Handshake:
+Browser sends request for secure connection to server.
+Server sends public key and certificate.
+
+2. Certificate check:
+Browser checks certificate
+
+3. Common key generation:
+Browser creates random symetrical key (common secert key).
+It encrypts this key using server public key and sends back to server.
+
+4. Key decryption and session key creation:
+Server uses private key to decrypt common secret key
+Browser and server now have common secret key.
+
+5. Secure data transmission:
+It is performed using common secret key.
+
+https://www.welivesecurity.com/2018/09/03/majority-worlds-top-websites-https/    Majority of the world’s top million websites now use HTTPS  
+http://httpforever.com/    HTTP Forever (A reliably insecure connection)  
+https://10015.io/tools/md5-encrypt-decrypt    MD5 Encrypt/Decrypt  
