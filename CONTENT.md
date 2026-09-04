@@ -343,3 +343,55 @@ RESTful Web-services:
 
 https://restfulapi.net/    REST API Tutorial  
 https://www.geeksforgeeks.org/javascript/rest-api-architectural-constraints/    REST API Architectural Constraints  
+
+
+### 12 API testing tools and frameworks
+OpenAPI specification  
+OpenAPI definition - JSON or YAML document that contains OpenAPI specification and describe API:
+- resources
+- operations
+- parameters
+- data schemes
+- headers
+
+Swagger is a tool set for development, documentation and testing API.
+
+Tools for API testing:
+- cURL
+- POSTMAN
+- SoapUI
+- ReadyAPI
+- Insomnia
+- Jmeter
+- Apigee
+- Katalon Studio
+- Karate DSL
+- API Fortress
+
+Frameworks and libraries for API testing
+
+Java stack:
+- Rest-assured
+- TestNG
+- Log4j
+- Gson
+- Allure
+
+JavaScript stack:
+- Axios
+- Jest
+- chai/mocha
+- jest-html-reporters
+- Playwright
+
+How to select tool:
+- Support different formats of Web API
+- Complexity
+- CI/CD integration
+- Scalability
+- Simplicity
+- Price
+
+https://swagger.io/docs/    Swagger documentation  
+https://katalon.com/resources-center/blog/top-5-free-api-testing-tools#h6    15 Best Automated API Testing Tools (Compared for 2026)  
+https://nordicapis.com/whats-the-difference-between-swagger-and-openapi/    What’s the Difference Between Swagger and OpenAPI?  
