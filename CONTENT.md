@@ -314,3 +314,32 @@ It is performed using common secret key.
 https://www.welivesecurity.com/2018/09/03/majority-worlds-top-websites-https/    Majority of the world’s top million websites now use HTTPS  
 http://httpforever.com/    HTTP Forever (A reliably insecure connection)  
 https://10015.io/tools/md5-encrypt-decrypt    MD5 Encrypt/Decrypt  
+
+
+### 11 Introduction to REST architecture
+REST - Representational State Transfer - it is architecture style
+
+Principles:
+- Client server architecture
+- Multilayer (client layer, business logic, DB access)
+- Stateless
+  - Request independence
+  - Authorization
+  - Caching
+  - Parametrization
+- Uniform interface (HTTP method + resource name)
+- Cacheable (client/server)
+- Code on demand
+
+RESTful Web-services:
+- Using correct HTTP methods
+- Using correct URLs
+- Using correct status codes
+- API versioning
+- Using authorization tokens
+- Informative error processing
+- Caching (client, server, DB)
+- Documentation (OpenAPI, Swagger)
+
+https://restfulapi.net/    REST API Tutorial  
+https://www.geeksforgeeks.org/javascript/rest-api-architectural-constraints/    REST API Architectural Constraints  
