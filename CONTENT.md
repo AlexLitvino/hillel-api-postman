@@ -395,3 +395,17 @@ How to select tool:
 https://swagger.io/docs/    Swagger documentation  
 https://katalon.com/resources-center/blog/top-5-free-api-testing-tools#h6    15 Best Automated API Testing Tools (Compared for 2026)  
 https://nordicapis.com/whats-the-difference-between-swagger-and-openapi/    What’s the Difference Between Swagger and OpenAPI?  
+
+
+## First requests. cURL
+
+### 13 Introduction to qauto app
+Environment 1  
+https://qauto.forstudy.space/    Web app (login:guest, password:welcome2qauto)  
+https://qauto.forstudy.space/api-logs    Logs. Could be viewed only after user registration  
+https://qauto.forstudy.space/api-docs/    Api docs for hillel-qauto project
+
+Environment2  
+https://qauto2.forstudy.space/    Web app (login:guest, password:welcome2qauto)  
+https://qauto2.forstudy.space/api-logs     Logs. Could be viewed only after user registration  
+https://qauto2.forstudy.space/api-docs/    Api docs for hillel-qauto project
