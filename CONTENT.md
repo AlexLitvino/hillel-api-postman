@@ -507,3 +507,12 @@ https://curl.se/    command line tool and library for transferring data with URL
 https://idratherbewriting.com/learnapidoc/docapis_install_curl.html#install-curl-on-windows    curl intro and installation  
 https://youtu.be/V5vZWHP-RqU    Mastering cURL with Daniel Stenberg  
 https://youtu.be/I6id1Y0YuNk    Using cURL better  
+
+
+## POSTMAN basic level
+
+### 15 Introduction to Postman
+https://www.postman.com/product/    Postman
+https://www.postman.com/pricing/    Postman pricing  
+https://www.postman.com/downloads/    Download Postman  
+https://learning.postman.com/docs/use/send-requests/create-requests/create-requests/    Create and send API requests in Postman  
