@@ -516,3 +516,6 @@ https://www.postman.com/product/    Postman
 https://www.postman.com/pricing/    Postman pricing  
 https://www.postman.com/downloads/    Download Postman  
 https://learning.postman.com/docs/use/send-requests/create-requests/create-requests/    Create and send API requests in Postman  
+https://learning.postman.com/docs/use/send-requests/response-data/visualizer/    Visualize request responses using Postman Visualizer  
+https://learning.postman.com/docs/use/send-requests/create-requests/parameters/    Send parameters and body data with API requests in Postman  
+https://learning.postman.com/docs/use/send-requests/create-requests/headers/    Configure headers for API requests in Postman  
