@@ -409,3 +409,101 @@ Environment2
 https://qauto2.forstudy.space/    Web app (login:guest, password:welcome2qauto)  
 https://qauto2.forstudy.space/api-logs     Logs. Could be viewed only after user registration  
 https://qauto2.forstudy.space/api-docs/    Api docs for hillel-qauto project
+
+
+### 14 cURL
+cURL (Client URL) supports many protocols (HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP, FILE, IMAP, SMTP, POP3).  
+
+```shell
+curl https://guest:welcome2qauto@qauto.forstudy.space
+```
+
+```shell
+curl -i -X POST -H "Content-Type: application/json" -d "{\"name\": \"John\", \"lastName\": \"Dou\", \"email\": \"testfgf53631@test.com\", \"password\": \"Qwerty12345\", \"repeatPassword\": \"Qwerty12345\"}" https://qauto.forstudy.space/api/auth/signup
+
+HTTP/1.1 201 Created
+Server: nginx
+Date: Sat, 05 Sep 2026 10:27:24 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 113
+Connection: keep-alive
+X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+ETag: W/"71-Lb6f5VtWkLltC1juugvPKEfUI40"
+Set-Cookie: sid=s%3Ai687y-xDlxGwYbOtl4fhdlaGX-U0KOMC.ZiPIQMlLER1c56lRi8XkZRVh9fgvCKXymxKykP1Zak4; Domain=.forstudy.space; Path=/; Expires=Sun, 06 Sep 2026 10:27:24 GMT
+
+{"status":"ok","data":{"userId":395925,"photoFilename":"default-user.png","distanceUnits":"km","currency":"usd"}}
+```
+-i - output headers and content  
+-X - request method  
+-H - adds header to request  
+-d - body  
+
+```shell
+curl -b"sid=s%3Ai687y-xDlxGwYbOtl4fhdlaGX-U0KOMC.ZiPIQMlLER1c56lRi8XkZRVh9fgvCKXymxKykP1Zak4" https://qauto.forstudy.space/api/users/profile
+
+{"status":"ok","data":{"userId":395925,"photoFilename":"default-user.png","name":"John","lastName":"Dou"}}
+```
+
+-b - set cookie  
+
+```shell
+curl -X PUT -H "Content-Type: application/json" -b"sid=s%3Ai687y-xDlxGwYbOtl4fhdlaGX-U0KOMC.ZiPIQMlLER1c56lRi8XkZRVh9fgvCKXymxKykP1Zak4" -d "{ \"photo\": \"user-1621352948859.jpg\", \"name\": \"John\", \"lastName\": \"Dou\", \"dateBirth\": \"2021-03-17T15:21:05.000Z\", \"country\": \"Ukraine\" }" https://qauto.forstudy.space/api/users/profile
+
+{"status":"ok","data":{"userId":395925,"photoFilename":"default-user.png","name":"John","lastName":"Dou","dateBirth":"2021-03-17T15:21:05.000Z","country":"Ukraine"}}
+```
+
+```shell
+curl -i -X DELETE -H "Content-Type: application/json" -b"sid=s%3Ai687y-xDlxGwYbOtl4fhdlaGX-U0KOMC.ZiPIQMlLER1c56lRi8XkZRVh9fgvCKXymxKykP1Zak4"  https://qauto.forstudy.space/api/users
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 05 Sep 2026 10:36:04 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 15
+Connection: keep-alive
+X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Set-Cookie: remember_me=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+Set-Cookie: sid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+ETag: W/"f-VaSQ4oDUiZblZNAEkkN+sX+q3Sg"
+
+{"status":"ok"}
+```
+
+Options:  
+--verbose - additional information  
+--trace FILE_NAME - hexdump of all incoming and outgoing data (including headers, traffic, and connection details) for a specific curl transfer.
+-o FILE_NAME - save output to file  
+--retry NUMBER - if error, retry request up to NUMBER times  
+--retry-connrefused - retry even when connection refused  
+--retry-delay - set delay between retries  
+-T FILE_NAME - upload file to server  
+
+Running commands from file
+
+Create file script.sh
+```text
+#!/bin/bash
+
+curl --verbose <https://guest:welcome2qauto@qauto.forstudy.space/>
+curl --verbose <https://another-example.com>
+```
+
+Give it permission for execution
+```shell
+chmod +x script.sh
+```
+
+Run file
+```shell
+./script.sh
+```
+
+https://curl.se/download.html    cURL Releases and Downloads  
+https://curl.se/    command line tool and library for transferring data with URLs  
+https://idratherbewriting.com/learnapidoc/docapis_install_curl.html#install-curl-on-windows    curl intro and installation  
+https://youtu.be/V5vZWHP-RqU    Mastering cURL with Daniel Stenberg  
+https://youtu.be/I6id1Y0YuNk    Using cURL better  
