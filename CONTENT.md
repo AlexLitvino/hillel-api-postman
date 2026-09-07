@@ -519,3 +519,21 @@ https://learning.postman.com/docs/use/send-requests/create-requests/create-reque
 https://learning.postman.com/docs/use/send-requests/response-data/visualizer/    Visualize request responses using Postman Visualizer  
 https://learning.postman.com/docs/use/send-requests/create-requests/parameters/    Send parameters and body data with API requests in Postman  
 https://learning.postman.com/docs/use/send-requests/create-requests/headers/    Configure headers for API requests in Postman  
+
+
+### 16 First requests in Postman
+https://learning.postman.com/docs/use/send-requests/create-requests/create-requests/    Create and send API requests in Postman  
+https://learning.postman.com/docs/use/send-requests/response-data/visualizer/    Visualize request responses using Postman Visualizer  
+https://learning.postman.com/docs/use/send-requests/create-requests/parameters/    Send parameters and body data with API requests in Postman  
+https://learning.postman.com/docs/use/send-requests/create-requests/headers/    Configure headers for API requests in Postman  
+https://qauto.forstudy.space/api-docs-json    Qauto Forstudy Space
+
+Homework requests  
+https://qauto.forstudy.space/api/auth/signup
+{
+  "name": "John",
+  "lastName": "Dou",
+  "email": "test@test.com",
+  "password": "Qwerty12345",
+  "repeatPassword": "Qwerty12345"
+}
