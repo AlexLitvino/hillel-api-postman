@@ -537,3 +537,35 @@ https://qauto.forstudy.space/api/auth/signup
   "password": "Qwerty12345",
   "repeatPassword": "Qwerty12345"
 }
+
+
+### 17 Working with Cookie
+Cookie used for:
+- Sessions and authentication
+- User tracking and analytics
+- Saving settings
+
+Cookie structure:
+- Name
+- Value
+- Domain
+- Path
+- Expires
+- Max-Age
+- Secure
+- HttpOnly
+
+To see all coookies, run this function in browser console (except HttpOnly=true):
+```javascript
+(function() {
+	// Отримати всі куки
+	var cookies = document.cookie.split(';');
+	// Вивести кожен куки у консоль
+	for (var i = 0; i < cookies.length; i++) {
+	    console.log(cookies[i].trim());
+	}
+})();
+```
+
+Create and capture cookies using Postman's cookie manager
+https://learning.postman.com/docs/use/send-requests/response-data/cookies/
