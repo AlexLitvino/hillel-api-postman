@@ -615,3 +615,13 @@ Authorization:
 https://www.base64decode.org/    Base64 decode  
 https://www.keepersecurity.com/blog/2023/12/26/authentication-vs-authorization-whats-the-difference/    Authentication vs Authorization: What’s the Difference?  
 https://www.osohq.com/post/ten-types-of-authorization    The 10 Types of Authorization: The Families of RBAC, ReBAC and ABAC  
+
+
+### Practice on Authentication and Authorization
+https://www.base64decode.org/    Base64 decode  
+https://www.keepersecurity.com/blog/2023/12/26/authentication-vs-authorization-whats-the-difference/    Authentication vs Authorization: What’s the Difference?    
+https://learning.postman.com/docs/use/send-requests/authorization/authorization/    API authentication and authorization in Postman    
+https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/get?hl=ru    Method: users.messages.get  
+https://console.cloud.google.com/apis/dashboard?pli=1    Setting accesses via Google  
+https://accounts.google.com/o/oauth2/auth    Auth URL for Google  
+https://accounts.google.com/o/oauth2/token    Access token URL  
