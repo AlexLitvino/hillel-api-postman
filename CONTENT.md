@@ -569,3 +569,49 @@ To see all coookies, run this function in browser console (except HttpOnly=true)
 
 Create and capture cookies using Postman's cookie manager
 https://learning.postman.com/docs/use/send-requests/response-data/cookies/
+
+
+### Authentication and Authorization
+Authentication:
+- Basic authentication
+- Session-Based Authentication
+- Token/JWT (JSON Web Token)-Based Authentication
+- OAuth 2.0
+
+Basic authentication - sending username and password encrypted as Base64 in header.  
+Request Authorization base64(username:password) ->
+
+Session-Based Authentication - server creates session for logged-in user.
+Request username:password ->
+<- Response Set-Cookie:JSESSIONID: 1234567
+
+Token-Based Authentication  
+Tokens:
+- JWT (JSON Web Tokens)
+- Opaque Tokens
+- Bearer Tokens
+- Refresh Tokens
+- ID Tokens
+- MAC Tokens (Message Authentication Code Tokens)
+
+JWT:
+- Header
+- Payload
+- Signature
+
+JWT  
+Request username:password ->
+<- Response {Token: JWT}
+
+OAuth 2.0 - allows one system to have access on another system.
+
+Authorization - defining access level to system.
+
+Authorization:
+- RBAC (Role-Based Access Control)
+- ABAC (Attribute-Based Access Control)
+- DAC (Discretionary Access Control)
+
+https://www.base64decode.org/    Base64 decode  
+https://www.keepersecurity.com/blog/2023/12/26/authentication-vs-authorization-whats-the-difference/    Authentication vs Authorization: What’s the Difference?  
+https://www.osohq.com/post/ten-types-of-authorization    The 10 Types of Authorization: The Families of RBAC, ReBAC and ABAC  
