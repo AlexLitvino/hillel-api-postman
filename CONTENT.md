@@ -725,3 +725,39 @@ https://learngitbranching.js.org/?locale=ru_RU    LearnGitBranching
 ### 22 Introduction to GitHub
 https://docs.github.com/en    GitHub Docs  
 https://help.github.com/    GitHub Support  
+
+
+### 23 Branching in Git
+Generate ssh key
+```shell
+ssh-keygen
+```
+
+```shell
+git remote add <NAME> <URL>
+git remote -v
+git remote remove <NAME>
+git remote set-url <NAME> <NEW_URL>
+
+git branch
+git branch <BRANCH_NAME>
+git branch -d <BRANCH_NAME>
+git branch -m <OLD_BRANCH_NAME> <NEW_BRANCH_NAME>
+git branch -a
+
+git checkout <BRANCH_NAME>
+
+git push origin <BRANCH_NAME>
+
+git merge <BRANCH_NAME>
+
+git fetch
+git pull origin <BRANCH_NAME>
+```
+
+Merge:
+- Fast-Forward (no new commits on main branch)
+- Recursive (new commits on main branch)
+- Conflict
+
+https://youtu.be/4evR80g--9k    Setting access to GitHub via SSH
