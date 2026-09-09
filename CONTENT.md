@@ -617,7 +617,7 @@ https://www.keepersecurity.com/blog/2023/12/26/authentication-vs-authorization-w
 https://www.osohq.com/post/ten-types-of-authorization    The 10 Types of Authorization: The Families of RBAC, ReBAC and ABAC  
 
 
-### Practice on Authentication and Authorization
+### 19 Practice on Authentication and Authorization
 https://www.base64decode.org/    Base64 decode  
 https://www.keepersecurity.com/blog/2023/12/26/authentication-vs-authorization-whats-the-difference/    Authentication vs Authorization: What’s the Difference?    
 https://learning.postman.com/docs/use/send-requests/authorization/authorization/    API authentication and authorization in Postman    
@@ -625,3 +625,31 @@ https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messag
 https://console.cloud.google.com/apis/dashboard?pli=1    Setting accesses via Google  
 https://accounts.google.com/o/oauth2/auth    Auth URL for Google  
 https://accounts.google.com/o/oauth2/token    Access token URL  
+
+
+### 20 Variables in Postman
+Variables types:
+- Postman
+- Global variables
+- Collection variables
+- Environment variables
+- Data variables
+- Local variables
+
+```
+pm.globals
+pm.collectionVariables
+pm.environment
+pm.variables
+```
+.get() - methods to access variable  
+.set() - set value to variable  
+.unset() - remove specific variable  
+.clear() - remove all variables  
+
+Custom variables {{variableName}}  
+Dynamic Postman variable {{$dynamicPostmanVariable}}
+
+https://learning.postman.com/docs/use/send-requests/variables/variables/    Store and reuse values using variables  
+https://www.baeldung.com/java-postman-variables    A Guide to Variables in Postman  
+https://learning.postman.com/docs/tests-and-scripts/write-scripts/variables-list/    Use dynamic variables to return randomly generated data  
