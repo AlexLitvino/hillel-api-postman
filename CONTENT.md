@@ -653,3 +653,70 @@ Dynamic Postman variable {{$dynamicPostmanVariable}}
 https://learning.postman.com/docs/use/send-requests/variables/variables/    Store and reuse values using variables  
 https://www.baeldung.com/java-postman-variables    A Guide to Variables in Postman  
 https://learning.postman.com/docs/tests-and-scripts/write-scripts/variables-list/    Use dynamic variables to return randomly generated data  
+
+
+## Git. Git Hub
+
+### 21 Version Control Systems. Git
+VCS functions:
+- Version history
+- Branching and merging
+- Conflicts and version control
+- Common work and access to history change
+- Automatic reserve backup
+- Audit and security
+
+Types of VCS:
+- Local
+- Centralized
+- Decentralized
+
+```shell
+git config --list
+git config --global user.name <USER_NAME>
+git config --global user.email <USER_EMAIL>
+```
+
+```shell
+git init
+
+git status
+
+git add <LIST_OF_FILES>
+git add .
+git add *.java
+git add <DIRECTORY>
+
+git commit -m <MESSAGE>
+git commit -a -m <MESSAGE>
+
+git log
+
+git diff
+git diff <COMMIT>
+git diff <FIRST_COMMIT> <SECOND_COMMIT>
+
+git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git reset --hard HEAD~1
+
+git push <REMOTE> <BRANCH>
+```
+
+File statuses:
+- Untracked
+- Unmodified
+- Staged
+- Modified
+- Ignored
+
+https://git-scm.com/    Git  
+https://bitbucket.org/    BitBucket  
+https://github.com/    GitHub  
+https://about.gitlab.com/    GitLab  
+https://git-scm.com/install/windows    Git installation for Windows  
+https://youtu.be/yjxv1HuRQy0    Git installation for Windows  
+https://youtu.be/B4qsvQ5IqWk    Git installation for Mac  
+https://git-scm.com/book/uk/v2    GitBook  
+https://githowto.com/uk    Git Tour  
+https://learngitbranching.js.org/?locale=ru_RU    LearnGitBranching  
