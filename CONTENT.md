@@ -761,3 +761,36 @@ Merge:
 - Conflict
 
 https://youtu.be/4evR80g--9k    Setting access to GitHub via SSH
+
+
+## JS basis for writing Postman scripts
+
+### 24 Why to learn JavaScript on this course. Introduction to JavaScript
+Comments: //, /*    */
+Variables:
+```
+let a;
+a = 5;
+```
+Constants:
+```
+const MY_CONST = 123;
+```
+
+Data types:
+- Number
+- String
+- Boolean
+- Object
+- Null
+- Undefined
+- Symbol
+- BigInt
+
+```
+typeof variable
+```
+
+https://www.sublimetext.com/download    Sublime Text  
+https://www.jetbrains.com/webstorm/download/?section=windows    WebStorm  
+https://www.w3schools.com/js/js_datatypes.asp    JavaScript Data Types  
