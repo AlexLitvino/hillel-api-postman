@@ -863,3 +863,55 @@ Bitwise operators:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table    Operator precedence  
 https://w3schoolsua.github.io/js/js_operators.html#gsc.tab=0    JavaScript Operators  
 https://xn--80adth0aefm3i.xn--j1amh/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8F-unicode    Unicode symbols table  
+
+
+### 26 Control flow instructions
+if - else
+```
+if (condition1){
+  body1
+} else if (condition2) {
+  body2
+} else {
+  body3
+}
+```
+
+Ternary operator
+```
+let value = (condition) ? valueIfTrue : valueIfFalse ;
+```
+
+Switch-case (it uses === for comparison)
+```
+let value = 10;
+switch (value){
+  case 1:
+    body1
+    break;
+  case 2:
+    body2
+    break;
+  ...
+  default:
+    defaultBody  
+}
+```
+
+```
+const age = 17
+
+switch (true) {
+  case age > 18:
+    console.log('Особа повнолітня');
+    break;
+  case age > 14:
+    console.log('Особа неповнолітня');
+    break;
+  default:
+   console.log('Особа малолітня');
+}
+```
+
+http://w3schools.com/jsref/jsref_if.asp    JavaScript if...else  
+https://www.w3schools.com/jsref/jsref_switch.asp    JavaScript switch Statement  
