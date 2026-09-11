@@ -794,3 +794,72 @@ typeof variable
 https://www.sublimetext.com/download    Sublime Text  
 https://www.jetbrains.com/webstorm/download/?section=windows    WebStorm  
 https://www.w3schools.com/js/js_datatypes.asp    JavaScript Data Types  
+
+
+### 25 Operators in JavaScript
+Arithmetic operations:
+- Add (+)
+- Sub (-)
+- Division (/)
+- Multiplication (*)
+- Rest from division (%)
+- Power (**)
+- Increment (++)
+- Decrement (--)
+- Unary plus (+)
+- Unary minus (-)
+
+Assignment:
+- a = b = c (a and b equal to c)
+- +=
+- -=
+- *=
+- /=
+- %=
+
+Comparison operators:
+- == (with automatic type conversion)
+- !=
+- `>
+- <
+- `>=
+- <=
+- ===
+- !==
+
+Always converted to false:
+- null
+- NaN
+- 0
+- ''
+- undefined
+
+```
+null == null  // true
+undefined == undefined  // true
+NaN == NaN  // false
+isNaN(NaN)  // true
+```
+
+Boolean operators:
+- && (AND) - returns last value if all true
+- || (OR) - returns first true
+- ! (NOT)
+- ?? - returns first not null and not undefined value
+
+```
+0 ?? 100 // 0
+```
+
+
+Bitwise operators:
+- & (AND)
+- | (OR)
+- ^ (XOR)
+- << (Shift left)
+- `>> (Shift right with sign)
+- `>>> (Shift right without sign)
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table    Operator precedence  
+https://w3schoolsua.github.io/js/js_operators.html#gsc.tab=0    JavaScript Operators  
+https://xn--80adth0aefm3i.xn--j1amh/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8F-unicode    Unicode symbols table  
