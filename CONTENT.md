@@ -915,3 +915,59 @@ switch (true) {
 
 http://w3schools.com/jsref/jsref_if.asp    JavaScript if...else  
 https://www.w3schools.com/jsref/jsref_switch.asp    JavaScript switch Statement  
+
+
+### 27 Loops
+while
+```
+while (condition) {
+  body
+}
+```
+
+do while
+```
+do {
+  body
+} while (condition)
+```
+
+for
+```
+for (initialization; condition; update){
+  body
+}
+```
+
+break - stops iterations in loop
+
+continue - skips current iteration
+
+continue with label
+```
+label: for (let i = 1; i <= 9; i++) {
+    for (let j = 1; j <= 9; j++) {
+        if (j === 5) {
+            console.log("----------------------------")
+            continue label;
+        }
+        console.log("Результат множення " + i + " * " + j + " = " + i * j);
+    }
+}
+```
+
+break with label
+```
+label: for (let i = 1; i <= 9; i++) {
+    for (let j = 1; j <= 9; j++) {
+        if (j === 5) {
+            break label;
+        }
+        console.log("Результат множення " + i + " * " + j + " = " + i * j);
+    }
+    console.log("----------------------------")
+}
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration    Loops and iteration  
+https://www.w3schools.com/js/js_loop_for.asp    JavaScript For Loop  

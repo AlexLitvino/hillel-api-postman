@@ -1,0 +1,8 @@
+/**
+ Вивести в консоль 11 разів меседж “API tester”
+ */
+
+for (let i = 0; i < 11; i++) {
+    console.log(i + " API tester");
+}
+
