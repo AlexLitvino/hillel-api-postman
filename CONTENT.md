@@ -971,3 +971,71 @@ label: for (let i = 1; i <= 9; i++) {
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration    Loops and iteration  
 https://www.w3schools.com/js/js_loop_for.asp    JavaScript For Loop  
+
+
+### 28 Functions
+Functions:
+ - Function Declaration
+ - Function Expression
+ - Arrow Functions
+
+Function Declaration. Uses hoisting (could be used before declaration)
+```
+function functionName(arguments){
+  body
+}
+```
+
+Function Expression
+```
+let functionName = function (arguments){
+  body
+}
+```
+
+Parameters by default
+```
+function printName(name = "John"){
+  console.log(`Hello, ${name}`);
+}
+```
+
+Arrow Functions
+```
+const multiply = (a, b) => a * b;
+```
+
+Rest parameters
+```
+function sum(...numbers) {
+  let total = 0;
+  for (const number of numbers) {
+    total += number;
+  }
+  return total;
+}
+
+const result = sum(1, 2, 3, 4, 5);
+console.log(result); // 15
+```
+
+Comparison
+1. Hoisting (Підйом):
+- Function Declaration: Yes
+- Function Expression: No
+- Arrow Function: No
+2.Context this:
+- Function Declaration: Own
+- Function Expression: Own
+- Arrow Function: Inherits from parents scope
+3. Syntax:
+- Function Declaration: Usual function syntax
+- Function Expression: Could be anonym or named
+- Arrow Function: Compact syntax
+4. Using arguments:
+- Function Declaration: Has
+- Function Expression: Has
+- Arrow Function: Doesn't have
+
+https://codeburst.io/all-about-javascript-functions-in-1-article-49bfd94b31ab    All about JavaScript functions in 1 article  
+https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc    JavaScript: Arrow Functions for Beginners  
