@@ -1039,3 +1039,65 @@ Comparison
 
 https://codeburst.io/all-about-javascript-functions-in-1-article-49bfd94b31ab    All about JavaScript functions in 1 article  
 https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc    JavaScript: Arrow Functions for Beginners  
+
+
+### 29 Number methods
+Numbers formats:
+- 123
+- 12e3
+- 0xFF
+
+isNaN() - tries to convert value to number  
+Number.isNaN() - compares value with NaN
+
+Number.isInteger() - checks if value is integer
+
+Number.isFinite
+```
+Number.isFinite(42);         // true
+Number.isFinite(0);          // true
+Number.isFinite(-3.14);      // true
+
+Number.isFinite(Infinity);   // false
+Number.isFinite(-Infinity);  // false
+Number.isFinite(NaN);        // false
+```
+
+Number.isSafeInteger() - number is within range -2^53 + 1 .. 2^53 - 1
+
+Number.parseInt() - parses integer from left to max possible symbol. Accepts radix as second parameter.
+```
+console.log(Number.parseInt('a123'));
+console.log(Number.parseInt('10', 2)); // Двійкова система
+console.log(Number.parseInt('ff', 16));
+console.log(Number.parseInt('100', 32));
+```
+
+Number.parseFloat() - parses float from the left
+
+Rounding
+```
+console.log("floor: из 3.6 до " + Math.floor(3.6)); // 3
+console.log('ceil: из 3.1 до ' + Math.ceil(3.1)); // 4
+console.log('round: из 3.4 до ' + Math.round(3.4)); // 3
+console.log('round: из 3.7 до ' + Math.round(3.7)); // 4
+
+let n = 12.66467;
+let str = n.toFixed(1);  // 12.7  1 - number of digits after dot
+
+var num = 123.456789;
+var formattedNum = num.toPrecision(5);   // 123.46  5 - number of all digits
+```
+
+Math.random() - random value [0 .. 1)
+
+```
+Math.sqrt(x)
+Math.pow(x, exp)
+Math.abs(x)
+Math.max(a, b, c...)
+Math.min(a, b, c...)
+```
+
+https://www.w3schools.com/jsref/jsref_obj_string.asp    JavaScript String Reference  
+https://www.w3schools.com/jsref/jsref_obj_number.asp    JavaScript Number Reference  
