@@ -1101,3 +1101,36 @@ Math.min(a, b, c...)
 
 https://www.w3schools.com/jsref/jsref_obj_string.asp    JavaScript String Reference  
 https://www.w3schools.com/jsref/jsref_obj_number.asp    JavaScript Number Reference  
+
+
+### 30 String methods
+Quotes:
+- ""
+- ''
+- `${variable}`
+
+.length
+
+Methods:
+- charAt(index)
+- repeat(count)
+- concat(...strings)
+- endsWith(suffix, [endSubstringIndex])
+- startsWith(prefix, [startSubstringIndex])
+- includes(substring, [startIndex])
+- indexOf(substring, [startIndex]) - -1 if not found
+- lastIndexOf(substring) - from right
+- padStart(totalStringLength, [symbol])
+- padEnd(totalStringLength, [symbol)
+- trimStart()
+- trimEnd()
+- trim()
+- toLowerCase()
+- toUpperCase()
+- replace(searchValue, replaceValue)
+- replaceAll(searchValue, replaceValue)
+- substring(start, end)
+- slice(start, end)
+- split(separator, [limit])
+
+https://www.w3schools.com/js/js_string_methods.asp    JavaScript String Methods  
