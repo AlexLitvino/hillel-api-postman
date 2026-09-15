@@ -1214,3 +1214,38 @@ console.log(person.getFullName()); // "John Doe"
 
 https://www.w3schools.com/js/js_json_datatypes.asp    JavaScript JSON Values  
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object    Object  
+
+
+### 32 Objects (part 2)
+Check if key in object:
+```
+var user = {
+    login: "JohnSnow",
+    age: 25,
+    admin: undefined
+}
+
+if ("admin" in user) console.log("Є така властивість");    
+```
+
+For in
+```
+for (let key in obj)
+    console.log(key + ': ' + obj[key]);*/
+```
+
+Object.keys(obj) - returns all keys (fields and methods).
+
+Object.values(obj) - returns all keys' values (fields and methods). For setters return undefined, for getters - its value.
+
+Object.entries(obj) - returns array of arrays [key, value].
+
+Object.create(protoObj) - creates object with prototype of another object.
+
+JSON.stringify(obj) - serialize JSON object.
+
+JSON.parse(string) - deserialize JSON string to object.
+
+https://www.w3schools.com/js/js_json_datatypes.asp    JavaScript JSON Values  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object    Object  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this    this  
