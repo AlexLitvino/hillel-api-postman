@@ -1134,3 +1134,83 @@ Methods:
 - split(separator, [limit])
 
 https://www.w3schools.com/js/js_string_methods.asp    JavaScript String Methods  
+
+
+### 31 Objects (part 1)
+Getter
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  } 
+};
+
+// Використання геттера
+console.log(person.fullName); // "John Doe"
+```
+
+Setter
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  set fullName(name) {
+    const parts = name.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
+};
+
+person.fullName = "Jane Smith";
+console.log(person.firstName); // "Jane"
+console.log(person.lastName); // "Smith"
+```
+
+Removing property
+```
+delete person.lastName; // Видалення властивості lastName
+```
+
+Methods:
+1. Usual functions
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  getFullName: function() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+
+console.log(person.getFullName()); // "John Doe"
+```
+2. Shorten syntax
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+
+console.log(person.getFullName()); // "John Doe"
+```
+3. Dynamic property
+```
+const methodName = "getFullName";
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  [methodName]() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+
+console.log(person.getFullName()); // "John Doe"
+```
+
+https://www.w3schools.com/js/js_json_datatypes.asp    JavaScript JSON Values  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object    Object  
