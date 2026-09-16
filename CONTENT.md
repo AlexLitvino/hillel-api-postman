@@ -1249,3 +1249,42 @@ JSON.parse(string) - deserialize JSON string to object.
 https://www.w3schools.com/js/js_json_datatypes.asp    JavaScript JSON Values  
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object    Object  
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this    this  
+
+
+### 33 Arrays
+Removing elements
+```
+let a = [1, 2, 3];
+delete a[0];
+a[0]  // undefined
+```
+
+Check if object is array:  
+Array.isArray(obj)
+
+Arrays methods:
+- toString()
+- join([separator])
+- string.split(separator)
+- concat(array), concat(...elements), concat(...elements, array)
+- indexOf(element)
+- lastIndexOf(element)
+- slice([firstIndex], [lastIndex])
+- reverse() - changes array itself (in-place)
+- sort([callback(item1, item2)]) - by default sorts lexicographically, need to pass function to sort numbers. Callback should return -1, 0, +1
+- pop() - removing and returning last element
+- push(...elements) - adds new elements to the end and returns new array length
+- shift() - removes first element and returns it
+- unshift(...elements) - adds elements to the beginning and return new array length
+- splice(start, deleteCount, ...items) - cut and inserts elements and returns cut elements
+- forEach(callback(element){}) - processes elements
+- map(callback(item)) - creates new array with processed elements
+- map(callback(item, iteration, initialArray))
+- filter(callback(item){})- creates new array with filtered items
+- reduce - numbers.reduce((accumulator, number) => accumulator + number, 0)
+- every(callback(item){}) - check if all items satisfy to callback
+- some(callback(item){}) - check if at least one item satisfy to callback
+- find(callback(item){}) - finds first element satisfies callback
+- findIndex(callback(item){}) - finds index of first element satisfies callback
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array    Array  
