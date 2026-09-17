@@ -1292,7 +1292,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 ## Postman advanced level
 
-### Object pm. Chain of requests in POSTMAN. Pre request script
+### 34 Object pm. Chain of requests in POSTMAN. Pre request script
 ```
 pm.variables.has("url");  // variables - local variables
 pm.variables.get("url");
@@ -1405,3 +1405,93 @@ pm.sendRequest({
 
 https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/overview/    Postman Sandbox API reference (Process data and script workflow using Postman JavaScript objects)  
 https://learning.postman.com/docs/tests-and-scripts/write-scripts/pre-request-scripts/    Write pre-request scripts to add dynamic behavior in Postman  
+
+
+### 35 Checks needed during API testing
+What to test:
+- Schema validation
+- Headers
+- Status codes
+- Cookie
+
+Request:
+- Special symbols
+- Too long or too short values
+- Incorrect method
+- Incorrect data type
+- Empty data/object
+- Null
+- Check duplicates
+
+Response body:
+- Body
+- Limit/Size/Pagination/Sorting
+- Internal and external API
+
+Example of JSON
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "age": 30,
+  "isActive": true,
+  "roles": ["user", "admin"]
+}
+```
+And its schema:
+```json
+{
+  "$schema": "<http://json-schema.org/draft-07/schema#>",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["id", "name", "email", "isActive"]
+}
+```
+
+Scheme validation in Postman
+```
+var jsonResponse = pm.response.json();
+var schema = {
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "age": { "type": "integer", "minimum": 0 },
+    "isActive": { "type": "boolean" },
+    "roles": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["id", "name", "email", "isActive"]
+};
+
+pm.test('JSON schema is valid', function() {
+  pm.expect(tv4.validate(jsonResponse, schema)).to.be.true;
+});
+```
+
+https://jsonformatter.org/json-to-jsonschema    JSON to JSON schema  
