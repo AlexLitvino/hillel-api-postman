@@ -1288,3 +1288,120 @@ Arrays methods:
 - findIndex(callback(item){}) - finds index of first element satisfies callback
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array    Array  
+
+
+## Postman advanced level
+
+### Object pm. Chain of requests in POSTMAN. Pre request script
+```
+pm.variables.has("url");  // variables - local variables
+pm.variables.get("url");
+pm.variables.set("example", "QA API");
+
+let text = "The API key is {{url}}";
+let resolvedText = pm.variables.replaceIn(text);
+
+pm.variables.replaceIn("{{$randomFirstName}}");
+
+pm.variables.toObject();  // transform variables to JSON object
+
+pm.environment;
+pm.globals;
+pm.collectionVariables;
+
+pm.info.eventName   // "prerequest", "test"
+pm.info.iteration
+pm.info.requestId
+pm.info.requestName
+pm.info.collectionName
+pm.info.collectionId
+pm.info.folderName
+pm.info.folderId
+pm.info.requestAuthor
+
+pm.request.url
+pm.request.headers
+pm.request.headers.add({key: "", value: ""})
+pm.request.headers.remove("name")
+pm.request.method
+pm.request.body
+pm.request.body.raw
+JSON.parse(pm.request.body.raw)
+
+pm.response.code
+pm.response.status
+pm.response.headers.all()
+pm.response.responseTime
+pm.response.responseSize
+pm.response.text()
+JSON.parse(pm.response.text())
+pm.response.json()
+```
+
+Sending request
+```
+pm.sendRequest({
+    url: 'https://postman-echo.com/get',
+    method: 'GET',
+    header: 'Content-Type: application/json',
+    body: {
+        mode: 'raw',
+        raw: JSON.stringify({
+            key: "value"
+        })
+    }
+}, function (err, res) {
+    if (err) {
+        console.log("Error:", err);
+    } else {
+        console.log("Response:", res.json());
+    }
+});
+```
+
+Request with additional headers
+```
+pm.sendRequest({
+    url: 'https://postman-echo.com/get',
+    method: 'GET',
+    header: {
+        'Authorization': 'Bearer abc123',
+        'Custom-Header': 'CustomValue'
+    }
+}, function (err, res) {
+    if (err) {
+        console.log("Error:", err);
+    } else {
+        console.log("Headers:", res.headers);
+        console.log("Response:", res.json());
+    }
+});
+```
+
+POST request with JSON body
+```
+pm.sendRequest({
+    url: 'https://postman-echo.com/post',
+    method: 'POST',
+    header: {
+        'Content-Type': 'application/json'
+    },
+    body: {
+        mode: 'raw',
+        raw: JSON.stringify({
+            name: "John Doe",
+            email: "john.doe@example.com",
+            age: 30
+        })
+    }
+}, function (err, res) {
+    if (err) {
+        console.log("Error:", err);
+    } else {
+        console.log("Response:", res.json());
+    }
+});
+```
+
+https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/overview/    Postman Sandbox API reference (Process data and script workflow using Postman JavaScript objects)  
+https://learning.postman.com/docs/tests-and-scripts/write-scripts/pre-request-scripts/    Write pre-request scripts to add dynamic behavior in Postman  
