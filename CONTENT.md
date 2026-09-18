@@ -1495,3 +1495,41 @@ pm.test('JSON schema is valid', function() {
 ```
 
 https://jsonformatter.org/json-to-jsonschema    JSON to JSON schema  
+
+
+### 36 Test in Postman
+Chai library is used in Postman.
+
+```
+var jsonData = pm.response.json();
+
+pm.test("Test name", function(){
+  pm.expect(jsonData.status).to.eql("ok");
+})
+```
+
+```
+pm.response.to.have.status(200);
+pm.expect(pm.response.text()).to.include("TT");
+pm.expect(jsonData.data.id).to.eql(1);
+pm.response.to.have.body({...});
+pm.response.to.have.header("Content-Type");
+pm.expect(pm.response.responseTime).to.be.below(200);  // faster than 200ms
+pm.expect(pm.response.code).to.be.oneOf([200, 202]);
+pm.response,to.have.status("OK");
+
+var xmlData = '...'
+var jsonObject = xml2Json(xmlData); 
+```
+
+Schema validation
+```
+var schema = {...};
+pm.expect(tv4.validate(pm.response.json(), schema).to.be.true;
+```
+OR
+```
+pm.response.to.have.jsonSchema(schema);
+```
+
+https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/    Write scripts to test API response data in Postman  
