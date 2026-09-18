@@ -1533,3 +1533,81 @@ pm.response.to.have.jsonSchema(schema);
 ```
 
 https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/    Write scripts to test API response data in Postman  
+
+
+### 37 Chai library
+Method eql verifies nested objects, equal - not, only first level.
+OR use deep:
+```
+pm.expect(object1).to.deep.equal(object2);
+```
+
+```
+to.be.string;
+to.be.NaN;
+to.be.null;
+to.be.undefined;
+
+pm.expect(array).to.be.empty;
+to.be.oneOf([1, 2, 3]);
+
+to.be.a("string");
+to.be.a("number");
+to.be.an("undefined");
+```
+
+have/has
+```
+const jsonData = pm.response.json();
+
+pm.expect(jsonData).to.have.property("status");
+pm.expect(jsonData).to.have.property("status", "ok");
+pm.expect(jsonData).to.have.property("data").that.is.an("object");
+pm.expect(jsonData).to.have.keys("data", "status");
+
+for (let key in obj){
+  if (obj[key].hasOwnProperty('publicKey')){
+    pm.expect(obj[key].publickKey).to.eql("publicKey");
+  }
+}
+```
+
+Match (for regular expressions)
+```
+pm.expect(jsonData.data.title).to.match(/TT|Q7/);
+pm.expect(jsonData.data.carBrandId).to.match(/[1,2,3,4]/);
+```
+
+Ordered
+```
+let array = [1,2,3,4,5,6];
+pm.expect(array).to.be.ordered.members([1,2,3,4,5,6]);
+
+let arrayObj = [{id: 1, name: "test1"}, {id: 4, name: "test2"}]
+pm.expect(arrayObj).to.be.ordered.deep.members([{id: 1, name: "test1"}, {id: 4, name: "test2"}]);
+```
+
+Include
+```
+let array = [1,2,3,4];
+pm.expect(array).to.include(4);
+
+pm.expect(array).to.deep.include({
+  id: 1,
+  carBrandId: 1,
+  title: "TT"
+});
+```
+
+Should style
+```
+pm.test("Response should have status 200", function () {
+    pm.response.should.have.status(200);
+});
+
+pm.test("Response body should contain 'success'", function () {
+    pm.response.text().should.include("success");
+});
+```
+
+https://www.chaijs.com/    Chai Assertion Library  
