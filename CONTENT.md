@@ -1611,3 +1611,79 @@ pm.test("Response body should contain 'success'", function () {
 ```
 
 https://www.chaijs.com/    Chai Assertion Library  
+
+
+### 38 Using native JavaScript in Postman
+Skipping tests
+```
+const shouldBeSkipped = true;
+
+(shouldBeSkipped? pm.test.skip: pm.test )("Check status code", () => {
+  pm.expect(pm.response.code).to.equal(200);
+})
+```
+Another way
+```
+const shouldBeSkipped = true;
+
+if (shouldBeSkipped) {
+  console.log('Skipped test TEST_NAME');  // Logging to console
+  pm.test.skip();
+} else {
+    pm.test("Check status code", () => {
+    pm.expect(pm.response.code).to.equal(200);
+  })
+}
+```
+
+Delay test
+```
+setTimeout(() => {console.log("Timeout");}, 5000);
+```
+
+Saving function to use in different tests using Eval function
+Saving function to variable:
+```
+   let randomFunction = 
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+    pm.collectionVariables.set("randomFunction", randomFunction.toString());
+```
+Getting function from variable in another request:
+```
+
+    // Отримання функції зі змінної колекції
+    let functionString = pm.collectionVariables.get("randomFunction");  
+    
+    // Виклик функції для генерації випадкового числа між 1 і 100
+    let randomNumber = eval(functionString)(1,100);
+    console.log("Випадкове число: ", randomNumber);
+
+    // Збереження результату у змінну колекції
+    pm.collectionVariables.set("randomNumber", randomNumber);
+```
+
+Package library
+```
+const apiTester = pm.require('@martian-meadow-129120/api_tester');
+```
+In package
+```
+function entity_to_export1(){}
+...
+module.exports = {entity_to_export1, ...}
+```
+
+Passing object into request body:
+```
+let randomUser = {
+    name: pm.variables.replaceIn("{{$randomFirstName}}"),
+    lastName: pm.variables.replaceIn("{{$randomLastName}}"),
+    email: pm.variables.replaceIn("{{$randomEmail}}"),
+    password: "Qwerty12345",
+    repeatPassword: "Qwerty12345"
+}
+
+pm.collectionVariables.set("body", JSON.stringify(randomUser));
+```
