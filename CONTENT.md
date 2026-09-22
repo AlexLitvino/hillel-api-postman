@@ -1798,3 +1798,32 @@ Postman Proxy - intercepts web, mobile requests in Postman for further analysis.
 
 https://learning.postman.com/docs/use/capturing-request-data/syncing-cookies/    Sync cookies using Postman Interceptor and the Postman proxy  
 https://chromewebstore.google.com/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo?pli=1    Postman Interceptor
+
+
+### 42 Flows and Mock servers
+Postman allows to create mock server - it creates URLs with specified response code and body.
+
+Request id is placed in Info tab
+```
+postman.setNextRequest("<REQUEST_NAME_OR_REQUEST_ID>");
+```
+
+To not perform any new requests
+```
+postman.setNextRequest(null)
+```
+```
+pm.test("Status code is 200", function () {
+    if (pm.response.code === 200) {
+        postman.setNextRequest("Get User Info");
+    } else {
+        postman.setNextRequest(null); // Зупинити виконання наступних запитів
+    }
+});
+```
+
+Postman Flows allows to create visual scenarios from requests. It supports programming languages (FQL and JavaScript).
+It supports linear instructions, branching and loops.
+
+https://learning.postman.com/docs/design-apis/mock-apis/set-up-mock-servers/    Deploy a mock server  
+https://learning.postman.com/flows/reference/flows-query-language/function-reference    FQL function reference
