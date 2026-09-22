@@ -1764,4 +1764,27 @@ cookieJar.unset("<https://qauto.forstudy.space>", "test2", (error, cookie) => {
 });
 ```
 
+When to use pm.cookies.jar():
+- Session management:When performing number of requests to API, that uses cookies for sessions, pm.cookies.jar() helps to keep these cookies between requests.
+- Authentication testing: jar could be used to keep cookies, obtained after login and use them in next requests to check if authentication state is kept.
+- Testing multiple subdomains: If API uses multiple subdomains, separate jars could be created for every subdomain, not to mix cookies.
+
+
 https://learning.postman.com/docs/use/send-requests/response-data/cookies/    Create and capture cookies using Postman's cookie manager  
+
+
+### 40 Branching in Postman
+To save Postman data in Git, create repository with directories:
+- collections
+- environments
+
+Export them from Postman and push to Git.  
+Problem: it is difficult to support collaboration like PR and merging conflicts between several users as exported JSON files not so convenient.
+
+Postman supports branching:
+- Crete a fork
+- Create pull request
+- Merge changes
+- Pull changes
+
+https://learning.postman.com/docs/collaborating-in-postman/using-version-control/forking-elements/    Fork elements in Postman  
