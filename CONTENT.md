@@ -1687,3 +1687,81 @@ let randomUser = {
 
 pm.collectionVariables.set("body", JSON.stringify(randomUser));
 ```
+
+
+### 39 Work with cookies
+Before work with cookies need to add them to Domains allowlist (select any Request -> Cookies -> Domains allowlist)
+
+To  manage cookies create cookieJar:
+```
+const cookieJar = pm.cookies.jar();
+```
+
+Add cookie
+```
+ cookieJar.set("<https://qauto.forstudy.space>", "test_key", "test_value");
+```
+
+Setting cookie with callback function
+```
+cookieJar.set("<https://qauto.forstudy.space>", "test2_key", "test_value", function(error, cookie) {
+    if (error) {
+        console.error("Помилка під час встановлення cookie:", error);
+    } else {
+        console.log("Cookie було успішно встановлено:", cookie);
+    }
+});
+```
+
+Adding cookie as object
+```
+let cookie = {
+    name: 'test2',
+    value: 'test2',
+    secure: true,
+    httpOnly: true
+}
+
+cookieJar.set("<https://qauto.forstudy.space>", cookie, (error, cookie) => {
+    if (error) {
+        console.error("Помилка під час встановлення cookie:", error);
+    } else {
+        console.log("Cookie було успішно встановлено:", cookie);
+    }
+});
+```
+
+Getting cookie by name
+```
+cookieJar.get("<https://qauto.forstudy.space>", "test2", function(error, cookie) {
+    if (error) {
+        console.error("Помилка під час отримання cookie:", error);
+    } else {
+        console.log("Отримане cookie:", cookie);
+    }
+});
+```
+
+Getting all cookies
+```
+cookieJar.getAll("<https://qauto.forstudy.space>", function(error, cookies) {
+    if (error) {
+        console.error("Помилка під час отримання cookies:", error);
+    } else {
+        console.log("Отримані cookies:", cookies);
+    }
+});
+```
+
+Removing cookie by name
+```
+cookieJar.unset("<https://qauto.forstudy.space>", "test2", (error, cookie) => {
+   if (error) {
+        console.error("Помилка під час видалення cookie:", error);
+    } else {
+        console.log("Cookie було успішно видалено:", cookie);
+    }
+});
+```
+
+https://learning.postman.com/docs/use/send-requests/response-data/cookies/    Create and capture cookies using Postman's cookie manager  
