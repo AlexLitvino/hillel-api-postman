@@ -1788,3 +1788,13 @@ Postman supports branching:
 - Pull changes
 
 https://learning.postman.com/docs/collaborating-in-postman/using-version-control/forking-elements/    Fork elements in Postman  
+
+
+### 41 Working with traffic
+Postman Interceptor - is Chrome extension  
+It allows to intercept requests from browser and save them to Postman.
+
+Postman Proxy - intercepts web, mobile requests in Postman for further analysis.
+
+https://learning.postman.com/docs/use/capturing-request-data/syncing-cookies/    Sync cookies using Postman Interceptor and the Postman proxy  
+https://chromewebstore.google.com/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo?pli=1    Postman Interceptor
