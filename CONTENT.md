@@ -1921,3 +1921,12 @@ https://nodejs.org/en/download    Download Node.js
 https://www.npmjs.com/search?ranking=popularity&q=newman-reporter    NPM Search  
 https://www.npmjs.com/package/newman-reporter-htmlextra    newman-reporter-htmlextra  
 https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/    Introducing the new Postman CLI to automate your API testing  
+
+
+### 45 Postman AI
+Usage:
+- Automatic adding tests
+- Visualize response
+- Adding documentation for request-response
+
+https://learning.postman.com/docs/getting-started/basics/about-agent-mode/    About Agent Mode  
