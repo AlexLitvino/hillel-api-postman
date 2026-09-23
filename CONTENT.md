@@ -1867,3 +1867,57 @@ Start running by schedule
 
 https://learning.postman.com/docs/tests-and-scripts/running-collections/intro-to-collection-runs/    Test your API using the Collection Runner  
 https://learning.postman.com/docs/tests-and-scripts/running-collections/building-workflows/    Customize request order in a collection run
+
+
+### 44 Running collections from CLI (Newman, Postman CLI)
+Tools:
+ - Newman - CLI for Postman to ingrate with CI/CD
+ - Postman CLI
+
+For Newman, install Node.js and npm. Then install Newman
+```shell
+npm install -g newman
+```
+
+API_KEY should be generated on Postman site  
+To run collection using Newman
+```shell
+newman run <https://api.postman.com/collections/<collection_id>?apikey=key_value>
+```
+
+Run exported to file collection
+```shell
+newman run path/to/your_file.json
+```
+
+Run collection using environment
+```shell
+newman run <https://api.postman.com/collections/collection_id?apikey=key_value> -e <https://api.postman.com/environments/env_id?apikey=key_value>
+```
+
+Newman creates console report. To create more convenient report install package:
+```shell
+npm install -g newman-reporter-html
+```
+
+More beautiful reporter
+```shell
+npm install -g newman-reporter-htmlextra
+```
+
+Run with report generation
+```shell
+newman run -r cli,html,htmlextra
+```
+
+Option -bail stops after first fail  
+Option -d passes data file to run  
+
+Postman CLI uses login and logout commands to avoid entering API_KEY with every command.
+
+https://blog.postman.com/postman-cli-vs-newman/    The Postman CLI vs. Newman: choose the right tool for you  
+https://learning.postman.com/docs/postman-cli/postman-cli-overview/    Explore Postman’s command-line companion  
+https://nodejs.org/en/download    Download Node.js  
+https://www.npmjs.com/search?ranking=popularity&q=newman-reporter    NPM Search  
+https://www.npmjs.com/package/newman-reporter-htmlextra    newman-reporter-htmlextra  
+https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/    Introducing the new Postman CLI to automate your API testing  
