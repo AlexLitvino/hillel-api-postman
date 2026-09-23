@@ -1827,3 +1827,43 @@ It supports linear instructions, branching and loops.
 
 https://learning.postman.com/docs/design-apis/mock-apis/set-up-mock-servers/    Deploy a mock server  
 https://learning.postman.com/flows/reference/flows-query-language/function-reference    FQL function reference
+
+
+### 43 Automatic run collection via Postman
+Runs:
+- Manually
+- Manully with data file
+- Schedule
+- Monitor
+- Using command line
+
+Run could be started manually
+
+Run could be started manually with external file (parametrization):
+Upload file:
+```json
+[
+	{
+	  "nameData":"",
+	  "nameError":"\"name\" is not allowed to be empty",
+	  "lastNameData":"",
+	  "lastNameError":"\"lastName\" is not allowed to be empty"
+	},
+	{
+	  "nameData":"q",
+	  "nameError":"Name has to be from 2 to 20 characters long",
+	  "lastNameData":"q",
+	  "lastNameError":"Last Name has to be from 2 to 20 characters long"
+	}
+]
+```
+To get data from file and use nameData in request:
+```
+let nameData = pm.iterationData.get("nameData");
+pm.collectionVariables.set("nameData", nameData);
+```
+
+Start running by schedule
+
+https://learning.postman.com/docs/tests-and-scripts/running-collections/intro-to-collection-runs/    Test your API using the Collection Runner  
+https://learning.postman.com/docs/tests-and-scripts/running-collections/building-workflows/    Customize request order in a collection run
