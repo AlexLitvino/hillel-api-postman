@@ -1930,3 +1930,108 @@ Usage:
 - Adding documentation for request-response
 
 https://learning.postman.com/docs/getting-started/basics/about-agent-mode/    About Agent Mode  
+
+
+## graphQL
+
+### 46 Introduction to graphQL
+GraphQL - is query language and query execution environment for obtaining data from connected sources via one API.
+
+GraphQL structure:
+- Queries
+- Schema
+- Resolvers
+
+Queries types:
+- Query
+- Mutation
+
+
+Schema is a central part of API  that describes all possible data that could be obtained.
+
+Data types:
+- Int
+- Float
+- String
+- Boolean
+- ID
+- Enumeration types
+- Lists and Non-null
+- Interfaces
+
+Query
+```
+query {
+	user(id: 123) {	
+		name		
+		email	
+	}
+}
+```
+
+Mutation
+```
+mutation {
+	createUser(name: "John Doe", email: "john@example.com") {	
+			id			
+			name			
+			email		
+		}
+}
+```
+
+Bunch requests - query batching (grouping) in GraphQL - is approach, when client combines several queries in one HTTP-request to GraphQL server.
+It helps to reduce numbers of calls to server and improve productivity. 
+```
+{
+  empireHero: hero(episode: EMPIRE){
+    name
+  }
+  jediHero: hero(episode: JEDI){
+    name
+  }  
+}
+```
+
+GraphQL allows to specify only needed fields in response.
+
+Aliases allows ask the same fields under different names:
+```
+{
+  firstUser: user {
+    id
+    name
+    email
+  }
+  secondUser: user {
+    id
+    name
+    email
+  }
+}
+```
+
+Variables allows to parametrize queries:
+```
+query GetUser($userId: ID!) {
+  user(id: $userId) {
+    id
+    name
+    email
+  }
+}
+```
+
+Main schema components:
+- Type Definitions
+- Fields
+- Queries
+- Mutations
+
+Resolvers - functions that define data should be returned for every field in query or mutation. 
+Resolvers define real logic for data obtaining. 
+They performs call to DB, other API and calculations.
+
+https://graphql.org/    GraphQL  
+https://www.redhat.com/en/topics/api/what-is-graphql    What is GraphQL?  
+https://graphql-ukrainian-cities.hillel.it/graphiql?path=/graphql    GraphQL example
