@@ -2208,3 +2208,10 @@ gRPC main characteristics:
 3. Protocols Buffers (Protobuf) - used for serialization
 4. Supports different programming languages (Java, Python, Go, C++, C#, etc).
 5. Different types of RPC: supports Unary, Client Streaming, Server Streaming та Bidirectional Streaming.
+
+
+### Working with gRPC in Postman
+https://grpc-hillel-warriors.hillel.it/ - example domain with TLS
+http://grpc-hillel-warriors.hillel.it:50051/ - example domain with no TLS
+https://blog.postman.com/postman-now-supports-grpc/    Postman Now Supports gRPC  
+https://docs.google.com/document/d/1yLogwL9bjQR_ViHGvAwY2z21X1wGET2mQmcmcQrCz_c    API gRPC  
