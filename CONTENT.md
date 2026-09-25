@@ -2192,3 +2192,19 @@ mutation{
 ```
 
 https://learning.postman.com/docs/use/send-requests/protocols/graphql/graphql-overview/    GraphQL in Postman  
+https://graphql-ukrainian-cities.hillel.it/graphql    Cities
+https://graphql-ukrainian-cities.hillel.it/graphiql?path=/graphql    Documentation  
+
+
+## gRPC
+
+### 48 What is http2.0. What is RPC. Introduction into gRPC
+gRPC (Google Remote Procedure Call) - framework for RPC.  
+It is built based on HTTP/2 and uses Protobuf (Protocol Buffers) as serialization format. 
+
+gRPC main characteristics:
+1. IDL (Interface Definition Language) - used for service and methods definition using Protobuf. Interfaces are described in .proto files.
+2. HTTP/2 - used for effective and scalable data transfer between client and server.
+3. Protocols Buffers (Protobuf) - used for serialization
+4. Supports different programming languages (Java, Python, Go, C++, C#, etc).
+5. Different types of RPC: supports Unary, Client Streaming, Server Streaming та Bidirectional Streaming.
