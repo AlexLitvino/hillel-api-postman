@@ -2035,3 +2035,160 @@ They performs call to DB, other API and calculations.
 https://graphql.org/    GraphQL  
 https://www.redhat.com/en/topics/api/what-is-graphql    What is GraphQL?  
 https://graphql-ukrainian-cities.hillel.it/graphiql?path=/graphql    GraphQL example
+
+
+### 47 Work with GraphQL in Postman
+Basic requests
+```
+query{
+  getAllCities{
+    id
+    name
+    square
+  }
+}
+
+query{
+  getAllCities{
+    id
+    name
+    square
+    ... on City{
+        description
+    }
+  }
+}
+
+query{
+  getCityById(id:2){
+    id
+    name
+    square
+  }
+}
+
+query{
+  getCityByRangeId(filter:{minId:10, maxId:14}){
+    id
+    name
+    square
+  }
+}
+
+query{
+  getCityDescription(id:23)
+}
+
+query{
+  getCitiesByIds(in:[1,3,5,6]){
+    id
+    name
+    square
+  }
+}
+```
+
+Aliases
+```
+query{
+  getCityById(id:2){
+    id
+    cityName: name
+    square
+  }
+}
+
+query{
+  city1:getCityById(id:2){
+    id
+    cityName: name
+    square
+  }
+  city2:getCityById(id:3){
+    id
+    cityName: name
+    square
+  }
+}
+```
+
+Fragments
+```
+query{
+  city1:getCityById(id:2){
+    ... CityDetails
+  }
+  city2:getCityById(id:3){
+    ... CityDetails
+  }
+}
+
+fragment CityDetails on CityAbstract{
+    id
+    cityName: name
+    square
+}
+```
+
+Directives
+```
+query($includeCity1: Boolean!){
+  city1:getCityById(id:2) @include(if:$includeCity1)
+  {
+    id
+    name
+    square
+  } 
+}
+
+{   
+    "includeCity1":true
+}
+```
+
+Variables
+```
+query($minId: Int! = 1, $maxId: Int! = 22){
+  getCityByRangeId(filter:{minId:$minId, maxId:$maxId}){
+    id
+    name
+    square
+  }
+}
+
+{
+    "minId":2,
+    "maxId":5
+}
+```
+
+Mutations
+```
+mutation{
+  addCity(name:"Test",square:23,description:"Best"){
+    id
+    name
+    square
+    ... on City{
+      description
+    }
+  }
+}
+
+mutation{
+ 	updateCity(id:3,name:"Test",square:234,description:"asdasd"){
+     id
+    name
+    square
+    ... on City{
+      description
+    }
+  }
+}
+
+mutation{
+ 	deleteCity(id:3)
+}
+```
+
+https://learning.postman.com/docs/use/send-requests/protocols/graphql/graphql-overview/    GraphQL in Postman  
