@@ -2215,3 +2215,14 @@ https://grpc-hillel-warriors.hillel.it/ - example domain with TLS
 http://grpc-hillel-warriors.hillel.it:50051/ - example domain with no TLS
 https://blog.postman.com/postman-now-supports-grpc/    Postman Now Supports gRPC  
 https://docs.google.com/document/d/1yLogwL9bjQR_ViHGvAwY2z21X1wGET2mQmcmcQrCz_c    API gRPC  
+
+
+## DevOps. CI/CD
+
+### 50 Introduction to DevOps
+
+
+### 51 Running tests via GitHub Actions
+https://docs.github.com/en/actions/get-started/quickstart    Quickstart for GitHub Actions  
+https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables    Store information in variables  
+https://learning.postman.com/docs/integrations/available-integrations/postman-integrations/    Postman-built integrations  

@@ -1,0 +1,49 @@
+name: Runnnnn
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Which environment to deploy to'
+        required: true
+        type: environment
+        
+jobs:
+  run-postman-collection:
+    runs-on: ubuntu-latest   
+    environment: ${{ github.event.inputs.environment }}
+
+    steps:            
+        
+      # Шаг 1: Checkout кода репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Шаг 2: Установить Node.js (поскольку newman — это Node.js пакет)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x' # или другая версия, которая вам нужна
+
+      # Шаг 3: Установить Newman для выполнения Postman коллекции
+      - name: Install Newman
+        run: npm install -g newman
+
+      # Шаг 4: Установить HTML reporter
+      - name: Install html-extra
+        run: npm install -g newman-reporter-htmlextra
+
+      # Шаг 5: Ствоереня директорії для репорту
+      - name: Make directory for result
+        run: mkdir -p testResult
+
+      # Шаг 5: Запуск Postman коллекции
+      - name: Run Postman Collection
+        run: newman run https://api.postman.com/collections/1911365-1a4e032c-530f-422a-a669-ab37949cbc15?apikey=${{ secrets.POSTMAN_API_KEY }} -e ${{ vars.URL }}?apikey=${{ secrets.POSTMAN_API_KEY }} -r cli,htmlextra --reporter-htmlextra-export testResult/htmlreport.html
+
+      # Шаг 5: Сохранить отчет о выполнении
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Report result
+          path: testResult
